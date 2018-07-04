@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Bootstrap Links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <!-- Linking custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Firebase Integration -->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="./js/utils/util.js"></script>
+
+    <script src="./js/models/student.js"></script>
+    <script src="./js/models/studentOperations.js"></script>
+    <script src="./js/models/teacher.js"></script>
+    <script src="./js/models/teacherOperations.js"></script>
+    <script src="./js/controller/loginController.js"></script>
+    <script src="./js/controller/studentLoginController.js"></script>
+    <script src="./js/controller/teacherLoginController.js"></script>
+
+</head>
+
+<body>
+    <button class="btn btn-primary" id="studentSection">Student</button>
+    <button class="btn btn-primary" id="teacherSection">Teacher</button>
+
+    <div id="studentLogin" class="container hide">
+        <div id="student-loginMessage" class="red"></div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="studentid" id="student-id" placeholder="Enter Student Id">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="pass" id="student-pass" placeholder="Enter password">
+        </div>
+        <button class="btn btn-success" id="student-LoginBt">Login</button>
+        <br>
+        <br>
+        <h3>Not a Member Yet...</h3>
+        <button class="btn btn-secondary" id="student-RegisterSection">Join Us</button>
+    </div>
+
+    <div id="teacherLogin" class="hide container">
+        <div id="teacher-loginMessage"></div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="teacherid" id="teacher-id" placeholder="Enter Teacher Id">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="teacherpass" id="teacher-pass" placeholder="Enter Password">
+        </div>
+        <button class="btn btn-success" id="teacher-LoginBt">Login</button>
+        <br>
+        <br>
+        <h3>Not a Member Yet...</h3>
+        <button class="btn btn-secondary" id="teacher-RegisterSection">Join Us</button>
+    </div>
+
+    <div id="studentRegister" class="hide container">
+        <h3>Student Registration</h3>
+        <div class="form-group">
+            <label for="">User Name</label>
+            <input type="text" class="form-control" name="studentRegId" id="student-reg-id">
+        </div>
+        <div id="student-id-availability"></div>
+        <div class="form-group">
+            <label for="">Password</label>
+            <input type="text" class="form-control" name="studentRegPass" id="student-reg-pass">
+        </div>
+        <div class="form-group">
+            <label for="">Student Name</label>
+            <input type="text" class="form-control" name="studentName" id="student-reg-name">
+        </div>
+        <button class="btn btn-info" id="student-RegisterBt">Register</button>
+    </div>
+
+    <div id="teacherRegister" class="hide container">
+        <h3>Teacher Registration</h3>
+        <div class="form-group">
+            <label for="">User Name</label>
+            <input type="text" class="form-control" name="teacherRegId" id="teacher-reg-id">
+        </div>
+        <div id="teacher-id-availability"></div>
+        <div class="form-group">
+            <label for="">Password</label>
+            <input type="text" class="form-control" name="teacherRegPass" id="teacher-reg-pass">
+
+        </div>
+        <div class="form-group">
+            <label for="">Name</label>
+            <input type="text" class="form-control" name="teacherName" id="teacher-reg-name">
+
+        </div>
+        <button class="btn btn-info" id="teacher-RegisterBt">Register</button>
+    </div>
+
+</body>
+
+</html>

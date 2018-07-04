@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Bootstrap Links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <!-- Firebase Integration -->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="./js/utils/util.js"></script>
+
+    <!-- Linking custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/models/stuQuestion.js"></script>
+    <script src="./js/models/stuTest.js"></script>
+    <script src="./js/models/testOperations.js"></script>
+    <script src="./js/controller/takeTestController.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1>Welcome Student
+            <span id="studentName"></span>
+        </h1>
+    </div>
+    <div id="beginTest" class="show">
+        <h4>Test
+            <span id="testName"></span>will start</h4>
+        <button id="beginTestBtn" class="btn btn-success">Begin Test</button>
+    </div>
+    <div id="testContainer" class="container hide">
+        <label for="" id="timer"></label>
+        <div id="questionStatusContainer"></div>
+
+        <div>
+            <span id="qId"></span>
+            <input type="text" class="form-control" id="qName" readonly>
+        </div>
+        <br>
+        <br>
+        <!-- Option #1 -->
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="radio" name="option" id="op1" value="1" checked>
+                </div>
+            </div>
+            <input type="text" class="form-control" id="option1" readonly>
+        </div>
+
+        <!-- Option #2 -->
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="radio" name="option" id="op2" value="2" readonly>
+                </div>
+            </div>
+            <input type="text" class="form-control" id="option2" readonly>
+        </div>
+
+        <!-- Option #3 -->
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="radio" name="option" id="op3" value="3" readonly>
+                </div>
+            </div>
+            <input type="text" class="form-control" id="option3" readonly>
+        </div>
+
+        <!-- Option #4 -->
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="radio" name="option" id="op4" value="4" readonly>
+                </div>
+            </div>
+            <input type="text" class="form-control" id="option4" readonly>
+        </div>
+        
+        <!-- Adding Buttons -->
+        <div class="d-flex justify-content-between">
+            <button class="btn btn-info" id="prevBtn">Previous</button>
+            <button class="btn btn-success" id="finishBtn">Finish</button>
+            <button class="btn btn-primary" id="nextBtn">Next</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.container{
+    margin : 20px;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td,th{
+    padding: 15px;
+    text-align: center;
+}
+
+.quesBtn{
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: grey;
+}
+
